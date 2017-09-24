@@ -1,5 +1,5 @@
 # ip-location-core
-IP location search library
+IP地理位置信息搜索
 
 ## 功能
 查找IP地址所属地的信息。
@@ -20,4 +20,7 @@ ipLocationRepository2.loadDataFromCsv("/PATH/TO/IPLOCATION_CSV_FILE");
 ```Java
 ipLocationRepository2.findByIp(IP_LONG);
 ```
-
+## TODOs
+1. 增加命令行接口，支持用户导入数据
+2. 性能优化：基于单台商用服务器进行性能优化
+3. 性能测试：测试单台服务器的查询性能
