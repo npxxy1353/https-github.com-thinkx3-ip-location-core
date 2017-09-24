@@ -14,7 +14,7 @@ IpLocationRepository ipLocationRepository = new IpLocationRepositoryRedisImpl.Bu
                 .setPassword(null)
                 .build();
 
-ipLocationRepository2.loadDataFromCsv("/Users/leo/Downloads/IP2LOCATION-LITE-DB11.CSV");
+ipLocationRepository2.loadDataFromCsv("/PATH/TO/IPLOCATION_CSV_FILE");
 ```
 ### 查询API
 ```
