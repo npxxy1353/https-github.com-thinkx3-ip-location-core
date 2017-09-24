@@ -55,17 +55,6 @@ public class IpLocationRepositoryRedisImpl implements IpLocationRepository {
         }
 
         Jedis jedis = null;
-/*
-        try{
-            Reader in = new InputStreamReader(new FileInputStream(file), encoding);
-            Iterable<CSVRecord> records = CSVFormat.RFC4180.withHeader("ipFrom", "ipTo", "countryCode","countryName","regionName","cityName","latitude","longitude","zipCode","timeZone").parse(in);
-            for (CSVRecord record : records) {
-                IpLocation ipLocation = IpLocation.fromCsvRecord(record);
-                jedis.zadd("ip2loc", ipLocation.getIpFrom(), ipLocation.toJson());
-            }
-        }finally {
-            jedis.close();
-        }*/
 
         LineIterator it = FileUtils.lineIterator(file, encoding);
         try {
@@ -81,7 +70,6 @@ public class IpLocationRepositoryRedisImpl implements IpLocationRepository {
             jedis.close();
         }
     }
-
 
     public static class Builder {
 
