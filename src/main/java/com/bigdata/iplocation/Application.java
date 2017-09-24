@@ -1,5 +1,6 @@
 package com.bigdata.iplocation;
 
+import com.bigdata.iplocation.entity.IpLocation;
 import com.bigdata.iplocation.repository.IpLocationRepository;
 import com.bigdata.iplocation.repository.IpLocationRepositoryRedisImpl;
 
@@ -52,7 +53,7 @@ public class Application {
                 final int TEST_ROUND = 200000;
                 for (int i = 0; i < TEST_ROUND; i++) {
                     long random = (long) (Math.random() * 0xFFFFFFFF);
-                    ipLocationRepository2.findByIp(random);
+                    IpLocation ipLocation = ipLocationRepository2.findByIp(random);
                 }
 
                 long cost = (System.currentTimeMillis() - start);

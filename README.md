@@ -18,7 +18,7 @@ ipLocationRepository.loadDataFromCsv("/PATH/TO/IPLOCATION_CSV_FILE");
 ```
 ### 查询API
 ```Java
-ipLocationRepository.findByIp(IP_LONG);
+IpLocation ipLocation = ipLocationRepository.findByIp(IP_LONG);
 ```
 ## TODOs
 1. 增加命令行接口，支持用户导入数据
